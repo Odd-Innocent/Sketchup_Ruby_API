@@ -20,10 +20,12 @@ def unit_vec(vec)
   n_vec = [vec.x/len, vec.y/len,0]
 end
 
-brick_w = 200
-brick_h = 100
-mold_d = 50
-mold_h = 80
+in_mm = 25.4
+
+brick_w = 200 / in_mm
+brick_h = 100 / in_mm
+mold_d = 50 / in_mm
+mold_h = 80 / in_mm
 
 _face = @sel.grep(Sketchup::Face)
 for f in _face
